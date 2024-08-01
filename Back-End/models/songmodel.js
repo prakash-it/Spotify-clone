@@ -1,17 +1,32 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
 
+const songSchema = new mongoose.Schema({
+    name: {
+        type: String,
+        required: true
+    },
+    desc: {
+        type: String,
+        required: true
+    },
+    album: {
+        type: String,
+        required: true
+    },
+    image: {
+        type: String,
+        required: true
+    },
+    file: {
+        type: String,
+        required: true
+    },
+    duration: {
+        type: String,
+        required: true
+    }
+});
 
-const song = new mongoose.Schema({
-    name:{type:String,required:true},
-    desc:{type:String,required:true},
-    album:{type:String,required:true},
-    image:{type:String,required:true},
-    file:{type:String,required:true},
-    duration:{type:String,required:true}
-})
+const Song = mongoose.model('spotifySongs', songSchema);
 
-
-
-const schemas = mongoose.models("songs",song)
-
-module.exports = schemas 
+module.exports = Song;

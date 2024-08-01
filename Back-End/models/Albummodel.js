@@ -9,6 +9,6 @@ const album = new mongoose.Schema({
 })
 
 
-const albumschema = mongoose.models("album", album)
+const albumschema = mongoose.model("albumsongs", album)
 
 module.exports = albumschema
