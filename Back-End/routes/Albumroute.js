@@ -4,9 +4,10 @@ const upload = require('../middleware/multer');
 
 const Albumrouter = express.Router() 
 
-Albumrouter.post('/add',upload.single('image'),addAlbum)
+Albumrouter.post('/add', upload.single('image'), addAlbum)
+
 Albumrouter.get('/list', listAlbum)
-Albumrouter.post('/remove',removeAlbum)
+Albumrouter.post('/ remove',removeAlbum)
 
 
 
